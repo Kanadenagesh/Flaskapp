@@ -31,6 +31,10 @@ def form():
   else:
    return render_template('form.html')
 
+@app.route('/list')
+def list():
+ return render_template('list.html',st=contact.query.all())
+
 if __name__ == '__main__':
 
  app.run()
