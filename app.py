@@ -3,8 +3,7 @@ from flask import Flask,render_template
 app = Flask(__name__)
 @app.route('/')
 def index():
-  return("<b>This Flask application is Hosted by Nagesh kanade For testing Purpose!</b>")
-
+  return render_template('index.html')
 @app.route('/about')
 def about():
   return render_template('about.html')
