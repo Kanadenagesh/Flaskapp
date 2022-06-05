@@ -14,7 +14,7 @@ class contact(db.Model):
 
 @app.route('/')
 def index():
-  return render_template('index.html')
+  return redirect(url_for('form'))
 @app.route('/about')
 def about():
   return render_template('about.html')
@@ -37,4 +37,4 @@ def list():
 
 if __name__ == '__main__':
 
- app.run()
+ app.run(debug=True)
